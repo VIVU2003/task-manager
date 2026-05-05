@@ -359,6 +359,7 @@ function App() {
     (member) => (member.userId?._id || member.userId) === auth.user?.id
   );
   const isProjectAdmin = selectedProjectMembership?.role === "ADMIN";
+  const activeRole = selectedProjectMembership?.role || "MEMBER";
   const isAdminAnywhere = projects.some((project) =>
     project.members?.some(
       (member) =>
@@ -412,7 +413,12 @@ function App() {
           {theme === "dark" ? "☀" : "◐"}
         </button>
         <header className="main-header">
-          <h2>{activePanel === "dashboard" ? `Welcome back, ${auth.user?.name}` : "Projects"}</h2>
+          <div className="header-row">
+            <h2>{activePanel === "dashboard" ? `Welcome back, ${auth.user?.name}` : "Projects"}</h2>
+            <span className={`role-badge role-${activeRole}`}>
+              {activeRole === "ADMIN" ? "Admin" : "Member"}
+            </span>
+          </div>
           <p className="header-subtitle">
             {activePanel === "dashboard"
               ? "Here's an overview of your tasks and projects."

@@ -450,6 +450,37 @@ button:disabled {
   margin-bottom: 18px;
 }
 
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+  border: 1px solid var(--line);
+  background: rgba(16, 27, 51, 0.7);
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.role-ADMIN {
+  border-color: rgba(95, 115, 255, 0.6);
+  background: rgba(95, 115, 255, 0.18);
+}
+
+.role-MEMBER {
+  border-color: rgba(148, 163, 184, 0.55);
+  background: rgba(148, 163, 184, 0.14);
+}
+
 .section-kicker {
   margin: 0;
   text-transform: uppercase;
@@ -852,6 +883,13 @@ body[data-theme="light"] .task-row {
 
 body[data-theme="light"] .kpi-card p {
   color: #6b7280;
+}
+
+body[data-theme="light"] .role-badge {
+  background: #ffffff;
+  border-color: #d1d9e6;
+  color: #111827;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
 }
 
 body[data-theme="light"] .kpi-icon {

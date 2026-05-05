@@ -1,95 +1,169 @@
-# Task Manager (Assignment Project)
+# 🚀 Task Manager (Assignment Project)
 
-Full stack task manager with role-based access (`ADMIN` / `MEMBER`), built using:
-- Backend: Node.js + Express + MongoDB (Mongoose)
-- Frontend: React + Vite
-- Auth: JWT + bcrypt
+A full-stack task management application with role-based access control (ADMIN / MEMBER). Users can create projects, assign tasks, and track progress through a clean dashboard.
 
-## Features
+---
 
-- Authentication (`/auth/signup`, `/auth/login`)
-- Project creation and listing (`POST /projects`, `GET /projects`)
-- Add project member by email (Admin only, simplified flow)
-- Task creation, listing, and update (`POST /tasks`, `GET /tasks`, `PATCH /tasks/:id`)
-- Dashboard summary (`GET /dashboard`) with counts and overdue tasks
+## 🔗 Live Demo
 
-## Folder Structure
+* 🌐 Live URL: https://github.com/VIVU2003/task-manager
+* 📂 GitHub Repo: <your repo link>
 
-- `backend/` - API server
-- `frontend/` - React app
+---
 
-## Backend Setup
+## 🧱 Tech Stack
 
-1. Create env file:
-   - Copy `backend/.env.example` to `backend/.env`
-2. Fill values:
-   - `MONGODB_URI`
-   - `JWT_SECRET`
-   - `PORT` (optional, default `5000`)
-3. Install and run:
+* **Frontend:** React + Vite
+* **Backend:** Node.js + Express
+* **Database:** MongoDB (Mongoose)
+* **Authentication:** JWT + bcrypt
+
+---
+
+## ✨ Features
+
+* 🔐 User authentication (Signup/Login)
+* 👥 Role-based access (Admin / Member)
+* 📁 Project creation and management
+* 👤 Add members to projects (Admin only)
+* ✅ Task creation, assignment, and status updates
+* 📊 Dashboard with:
+
+  * Total tasks
+  * Completed tasks
+  * Pending tasks
+  * Overdue tasks
+
+---
+
+## 🔑 Role-Based Access (RBAC)
+
+### 👑 Admin
+
+* Create projects (admin users only)
+* Add members
+* Create and assign tasks
+* Full control over project actions
+
+### 👤 Member
+
+* View project tasks
+* Update task status only
+
+---
+
+## 📦 Folder Structure
+
+```text
+backend/    → Express API
+frontend/   → React application
+```
+
+---
+
+## ⚙️ Backend Setup
+
+1. Create `.env` file:
+
+```env
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_secret
+PORT=5001
+```
+
+2. Install & run:
 
 ```bash
 npm install --prefix backend
 npm run dev --prefix backend
 ```
 
-Backend runs on `http://localhost:5000`.
+Backend runs on: http://localhost:5001
 
-## Frontend Setup
+---
 
-1. Create env file:
-   - Copy `frontend/.env.example` to `frontend/.env`
-2. Install and run:
+## 💻 Frontend Setup
+
+1. Create `.env` file:
+
+```env
+VITE_API_URL=http://localhost:5001
+```
+
+2. Install & run:
 
 ```bash
 npm install --prefix frontend
 npm run dev --prefix frontend
 ```
 
-Frontend runs on `http://localhost:5173`.
+Frontend runs on: http://localhost:5173
 
-## API Overview
+---
+
+## 🔗 API Overview
 
 ### Auth
-- `POST /auth/signup`
-- `POST /auth/login`
+
+* `POST /auth/signup`
+* `POST /auth/login`
 
 ### Projects
-- `POST /projects` (JWT required)
-- `GET /projects` (JWT required)
-- `PATCH /projects/:id/add-member` (JWT required, Admin only)
+
+* `POST /projects` (Admin only)
+* `GET /projects`
+* `PATCH /projects/:id/add-member` (Admin only)
 
 ### Tasks
-- `POST /tasks` (JWT required)
-- `GET /tasks?projectId=<id>` (JWT required)
-- `PATCH /tasks/:id` (JWT required)
+
+* `POST /tasks` (Admin only)
+* `GET /tasks?projectId=<id>`
+* `PATCH /tasks/:id` (update status)
 
 ### Dashboard
-- `GET /dashboard` (JWT required)
 
-## Role Logic
+* `GET /dashboard`
 
-- Project creator is `ADMIN`
-- Members are stored per project
-- Admin can add members and assign/reassign tasks
-- Members can view project/tasks and update task status
+---
 
-## Railway Deployment (Simple)
+## 📊 Dashboard Logic
 
-1. Push code to GitHub repository.
-2. Create new Railway project and connect the GitHub repo.
-3. Add environment variables in Railway:
-   - `MONGODB_URI`
-   - `JWT_SECRET`
-   - `PORT` (optional)
-4. Set service root to `backend` and start command:
-   - `npm start`
-5. Deploy and verify API health at `/health`.
-6. Deploy frontend (Vercel/Netlify/Railway static) and set `VITE_API_URL` to backend public URL.
+* **Total Tasks:** All tasks in project
+* **Completed:** status = DONE
+* **Pending:** status != DONE
+* **Overdue:** dueDate < today AND status != DONE
 
-## Submission Checklist
+---
 
-- Live URL
-- GitHub repo
-- README
-- 2-5 minute demo video
+## 🚀 Deployment
+
+* Backend deployed on Railway
+* Database hosted on MongoDB Atlas
+* Frontend deployed on <Railway / Netlify>
+
+---
+
+## 🎥 Demo Flow
+
+1. Signup/Login
+2. Create a project (Admin)
+3. Add a member
+4. Create and assign tasks
+5. Member updates task status
+6. Show dashboard updates
+7. Show role restriction (Member cannot create project)
+
+---
+
+## 🧠 Notes
+
+* Simplified member management (no invite system)
+* Focused on clean architecture and core functionality
+* Designed for fast development and clarity
+
+---
+
+## 📬 Contact
+
+If needed, feel free to reach out!
+

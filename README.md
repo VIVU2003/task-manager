@@ -6,8 +6,8 @@ A full-stack task management application with role-based access control (ADMIN /
 
 ## 🔗 Live Demo
 
-* 🌐 Live URL: https://github.com/VIVU2003/task-manager
-* 📂 GitHub Repo: <your repo link>
+* 🌐 Live URL: 
+* 📂 GitHub Repo: https://github.com/VIVU2003/task-manager
 
 ---
 

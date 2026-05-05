@@ -455,6 +455,7 @@ button:disabled {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  padding-right: 52px;
 }
 
 .role-badge {

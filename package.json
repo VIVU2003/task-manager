@@ -1,0 +1,16 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Task manager assignment (Node/Express + MongoDB + React)",
+  "main": "index.js",
+  "scripts": {
+    "backend:dev": "npm run dev --prefix backend",
+    "backend:start": "npm run start --prefix backend",
+    "frontend:dev": "npm run dev --prefix frontend",
+    "frontend:build": "npm run build --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

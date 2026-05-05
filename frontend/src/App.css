@@ -165,11 +165,21 @@ select {
   margin-bottom: 14px;
   font-size: clamp(2rem, 2.8vw, 2.7rem);
   line-height: 1.05;
+  color: #0f172a;
 }
 
 .auth-card input {
   background: #f1f6ff;
   border-color: #d6dfec;
+  color: #111827;
+}
+
+.auth-card input::placeholder {
+  color: #6b7280;
+}
+
+.auth-card label {
+  color: #475569;
 }
 
 .auth-card button[type="submit"] {

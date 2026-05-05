@@ -6,7 +6,7 @@ A full-stack task management application with role-based access control (ADMIN /
 
 ## 🔗 Live Demo
 
-* 🌐 Live URL: 
+* 🌐 Live URL: https://task-manager-omega-self.vercel.app/
 * 📂 GitHub Repo: https://github.com/VIVU2003/task-manager
 
 ---
@@ -139,7 +139,7 @@ Frontend runs on: http://localhost:5173
 
 * Backend deployed on Railway
 * Database hosted on MongoDB Atlas
-* Frontend deployed on <Railway / Netlify>
+* Frontend deployed on Vercel
 
 ---
 

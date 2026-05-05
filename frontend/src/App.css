@@ -204,7 +204,7 @@ select {
 }
 
 .tabs button:hover {
-  background: rgba(95, 115, 255, 0.18);
+  /* background: rgba(95, 115, 255, 0.18); */
   color: var(--text-main);
 }
 
